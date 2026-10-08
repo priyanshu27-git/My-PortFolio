@@ -2,15 +2,18 @@ import { Button } from "../components/Button";
 import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import { FaLinkedin } from "react-icons/fa";
+
 import {
-  SiX,
+  SiGithub,
+  SiGmail,
 } from "@icons-pack/react-simple-icons";
 
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "#skills", label: "Skills" },
+  { href: "#achievements", label: "Achievements" },
 ];
 
 export const Navbar = () => {
@@ -56,10 +59,22 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
-        </div>
+       {/* Social Links */}
+            <div className="flex items-center gap-6 animate-fade-in animation-delay-400 ">
+              {[
+                { icon: SiGithub, href: "https://github.com/priyanshu27-git" },
+                { icon: FaLinkedin, href: "https://www.linkedin.com/in/priyanshusahu/" },
+                { icon: SiGmail, href: "mailto:priyanshusahu2694@gmail.com" },
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  className="p-2 rounded-full  glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                >
+                  {<social.icon className="w-6 h-6" />}
+                </a>
+              ))}
+            </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -72,7 +87,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass-strong animate-fade-in">
+        <div className="glass-strong animate-fade-in">
           <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
             {navLinks.map((link, index) => (
               <a
@@ -85,9 +100,7 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contact Me
-            </Button>
+            
           </div>
         </div>
       )}

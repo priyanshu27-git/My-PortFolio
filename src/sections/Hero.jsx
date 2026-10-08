@@ -5,12 +5,6 @@ import {
   Download,
 } from "lucide-react";
 
-import { FaLinkedin } from "react-icons/fa";
-
-import {
-  SiGithub,
-  SiX,
-} from "@icons-pack/react-simple-icons";
 
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
@@ -71,10 +65,10 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer 
+                Software Engineer
               </span>
             </div>
-           
+
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
@@ -87,38 +81,41 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Priyanshu Sahu, a Software Engineer passionate about building modern, scalable web applications. I turn ideas into fast, intuitive, and engaging digital experiences using code and creativity.
+                Hi, I'm Priyanshu Sahu, a Software Engineer passionate about
+                building modern, scalable web applications. I turn ideas into
+                fast, intuitive, and engaging digital experiences using code and
+                creativity.
               </p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
+            <div className="flex flex-wrap gap-4  animate-fade-in animation-delay-300">
+              <Button
+                size="lg"
+                onClick={() => {
+                  document.getElementById("contact")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              >
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
+              <AnimatedBorderButton
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/Priyanshu_Sahu_Resume.pdf";
+                  link.download = "Priyanshu_Sahu_Resume.pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
                 <Download className="w-5 h-5" />
-                Download CV
+                Download Resume
               </AnimatedBorderButton>
             </div>
 
-            {/* Social Links */}
-            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-              <span className="text-sm text-muted-foreground">Follow me: </span>
-              {[
-                { icon: SiGithub, href: "#" },
-                { icon: FaLinkedin, href: "#" },
-                { icon: SiX, href: "#" },
-              ].map((social, idx) => (
-                <a
-                  key={idx}
-                  href={social.href}
-                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
-                >
-                  {<social.icon className="w-5 h-5" />}
-                </a>
-              ))}
-            </div>
+            
           </div>
           {/* Right Column - Profile Image */}
           <div className="relatice animate-fade-in animation-delay-300">
@@ -147,9 +144,7 @@ export const Hero = () => {
                   </div>
                 </div>
                 {/* Stats Badge */}
-                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  
-                </div>
+                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500"></div>
               </div>
             </div>
           </div>
@@ -190,8 +185,6 @@ export const Hero = () => {
           href="#about"
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
         >
-          {/* <span className="text-xs uppercase tracking-wider">Scroll</span>
-          <ChevronDown className="w-6 h-6 animate-bounce" /> */}
         </a>
       </div>
     </section>

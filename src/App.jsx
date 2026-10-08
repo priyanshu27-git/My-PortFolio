@@ -5,6 +5,9 @@ import { Projects } from "./sections/Projects";
 // import { Experience } from "./sections/Experience";
 import { Contact } from "./sections/Contact";
 import { Footer } from "./layout/Footer";
+import { Skills } from "./sections/Skills";
+import Achievements from "./sections/Achievements";
+
 
 function App() {
   return (
@@ -14,6 +17,8 @@ function App() {
         <Hero />
         <About />
         <Projects />
+        <Skills/>
+        <Achievements/>
         {/* <Experience /> */}
         <Contact />
       </main>

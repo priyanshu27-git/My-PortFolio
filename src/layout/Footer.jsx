@@ -4,19 +4,20 @@ import { FaLinkedin } from "react-icons/fa";
 
 import {
   SiGithub,
+  SiGmail,
   SiX,
 } from "@icons-pack/react-simple-icons";
 
 const socialLinks = [
-  { icon: SiGithub, href: "#", label: "GitHub" },
-  { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-  { icon: SiX, href: "#", label: "Twitter" },
+  { icon: SiGithub, href: "https://github.com/priyanshu27-git", label: "GitHub" },
+  { icon: FaLinkedin, href: "https://www.linkedin.com/in/priyanshusahu/", label: "LinkedIn" },
+  { icon: SiGmail, href: "mailto:priyanshusahu2694@gmail.com", label: "Gmail" },
 ];
 
 const footerLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
+  { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
 
