@@ -10,19 +10,14 @@ import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
   "React",
-  "Next.js",
   "Express.js",
-  "TypeScript",
   "Node.js",
   "MongoDB",
-  "Docker",
-  "AWS",
   "Vercel",
   "Tailwind CSS",
-  "Prisma",
-  "Figma",
   "Git",
   "GitHub Actions",
+  "JWT",
 ];
 
 export const Hero = () => {
