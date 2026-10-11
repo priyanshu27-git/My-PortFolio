@@ -56,23 +56,51 @@ export const About = () => {
               </p>
             </div>
 
-            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
-              <p className="text-lg font-medium italic text-foreground">
-                <span className="flex gap-4 "> <GraduationCap size={32} color="aqua"/> Education</span>
-                <div className="ml-12">
-                 <h3> Baderia Global Institute of Engineering and Management, Jabalpur </h3>
- <p className="text-sm font-medium mt-2 "> Bachelor of Technology in Computer Science and Engineering </p>
- <div className="flex gap-4">
-    <p className="flex text-sm gap-2 mt-4 items-center"> <Calendar size={22} /> 2023 - 2027</p>
+            
+<div className="glass glow-border animate-fade-in animation-delay-300 rounded-2xl p-6 sm:p-8">
+  {/* Header */}
+  <div className="flex items-center gap-3 mb-6">
+    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+      <GraduationCap
+        size={28}
+        className="text-primary"
+        aria-hidden="true"
+      />
+    </div>
 
- <p className="flex text-sm gap-2 mt-4 items-center"> <MapPin />  Jabalpur , Madhya Pradesh</p>
- </div>
-                </div>
-              </p>
-            </div>
+    <h3 className="text-xl font-semibold text-foreground">
+      Education
+    </h3>
+  </div>
+
+  {/* Education Details */}
+  <div className="ml-1 border-l-2 border-primary/30 pl-5 sm:pl-6">
+    <h4 className="text-lg sm:text-xl font-semibold leading-snug text-foreground">
+      Baderia Global Institute of Engineering and Management
+    </h4>
+
+    <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
+      Bachelor of Technology in Computer Science and Engineering
+    </p>
+
+    {/* Date and Location */}
+    <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-x-6">
+      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+        <Calendar size={17} className="shrink-0 text-primary" aria-hidden="true" />
+        <span>2023 - 2027</span>
+      </div>
+
+      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+        <MapPin size={17} className="shrink-0 text-primary" aria-hidden="true" />
+        <span>Jabalpur, Madhya Pradesh</span>
+      </div>
+    </div>
+  </div>
+</div>
+
           </div>
 
-          {/* Right Column - Hilights */}
+          {/* Right Column - Highlights */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, idx) => (
               <div

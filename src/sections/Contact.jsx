@@ -123,7 +123,9 @@ export const Contact = () => {
                 </label>
                 <input
                   id="name"
+                  name="name"
                   type="text"
+                  autoComplete="name"
                   required
                   placeholder="Your name..."
                   value={formData.name}
@@ -143,6 +145,10 @@ export const Contact = () => {
                   Email
                 </label>
                 <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
                   required
                   placeholder="your@email.com"
                   value={formData.email}
@@ -161,6 +167,8 @@ export const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  id="message"
+                  name="message"
                   rows={5}
                   required
                   value={formData.message}

@@ -13,7 +13,7 @@ const projects = [
     image: "/projects/project1.png",
     tags: ["React", "Javascript", "NodeJS" , "Express.js", "MongoDB ", "JWT" ],
     link: "#",
-    github: "#",
+    github: "https://github.com/priyanshu27-git/House-Rent-Management-System",
   },
   {
     title: "Safe Transit Assistant | Safety Navigation System",
@@ -21,8 +21,8 @@ const projects = [
       "A safety-focused navigation system designed to help users choose safer routes instead of simply choosing the shortest or fastest path. The application considers factors such as crime risk, street lighting, crowd density, and time to generate safety-aware route recommendations.",
     image: "/projects/project2.png",
     tags: ["React.js", "JavaScript ", "TailwindCSS"],
-    link: "#",
-    github: "#",
+    link: "https://safe-transit-assistant.vercel.app/",
+    github: "https://github.com/priyanshu27-git/Safe-Transit-Assistant",
   },
 ];
 

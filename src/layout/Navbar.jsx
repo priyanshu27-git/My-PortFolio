@@ -1,5 +1,5 @@
 import { Button } from "../components/Button";
-import { Menu } from "lucide-react";
+import { Menu , X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { FaLinkedin } from "react-icons/fa";
@@ -81,7 +81,7 @@ export const Navbar = () => {
           className="md:hidden p-2 text-foreground cursor-pointer"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
         >
-          {isMobileMenuOpen ? <SiX size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
 
